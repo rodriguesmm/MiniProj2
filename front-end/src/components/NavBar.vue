@@ -46,6 +46,12 @@
           <div v-else>
             <b-nav-item :to="{ name: 'login' }">LOGIN</b-nav-item>
           </div>
+          <div v-if="isUserLoggedIn && getUserType !== 'user'">
+            <b-nav-item :to="{ name: 'expert' }">EXPERT</b-nav-item>
+          </div>
+          <div v-if="isUserLoggedIn && getUserType !== 'user'">
+            <b-nav-item :to="{ name: 'sponsor' }">SPONSOR</b-nav-item>
+          </div>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

@@ -141,6 +141,21 @@ const routes = [
       rule: "user"
     }
   },
+  {
+    path: "/expert/animals",
+    name: "expert",
+    component: () => import("@/views/expert/ListAnimals.vue")
+  },
+  {
+    path: "/expert/animals/:animalId",
+    name: "contributeAnimal",
+    component: () => import("@/views/expert/ContributeAnimal.vue")
+  },
+  {
+    path: "/sponsor/animals",
+    name: "sponsor",
+    component: () => import("@/views/sponsor/ListAnimals.vue")
+  },
   // Redirect to 404 page, if no match found
   {
     path: "*",
